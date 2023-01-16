@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+    box-sizing: content-box;
+}
+
+.container {
+  display: flex;
+  color: #ffffff;
+  flex-wrap: wrap;
+}
+.col {
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  flex:1;
+}
+
+.container .col-1 {
+  background: blue;
+  max-width: 170px;
+}
+
+.container .col-2 {
+  background: red;
+}
+
+.container .col-3 {
+  background: black;
+  max-width: 200px;
+}
+
+@media screen and (max-width: 720px) {
+  .container {
+    flex-direction: column;
+  }
+  .container .col-1, .container .col-3 {
+    max-width: none;
+  }
+}
+
